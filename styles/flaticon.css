@@ -1,0 +1,136 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../fonts/flaticon.ttf?fea848a5547216fdcc19ab079ee0d39d") format("truetype"),
+        url("../fonts/flaticon.woff?fea848a5547216fdcc19ab079ee0d39d") format("woff"),
+        url("../fonts/flaticon.woff2?fea848a5547216fdcc19ab079ee0d39d") format("woff2"),
+        url("../fonts/flaticon.eot?fea848a5547216fdcc19ab079ee0d39d#iefix") format("embedded-opentype"),
+        url("../fonts/flaticon.svg?fea848a5547216fdcc19ab079ee0d39d#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before,
+i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+}
+
+.flaticon-bag:before {
+    content: "\f101";
+}
+
+.flaticon-shopping-cart:before {
+    content: "\f102";
+}
+
+.flaticon-loupe:before {
+    content: "\f103";
+}
+
+.flaticon-heart:before {
+    content: "\f104";
+}
+
+.flaticon-like:before {
+    content: "\f105";
+}
+
+.flaticon-envelope:before {
+    content: "\f106";
+}
+
+.flaticon-pin:before {
+    content: "\f107";
+}
+
+.flaticon-call:before {
+    content: "\f108";
+}
+
+.flaticon-mobile-phone:before {
+    content: "\f109";
+}
+
+.flaticon-user:before {
+    content: "\f10a";
+}
+
+.flaticon-delete:before {
+    content: "\f10b";
+}
+
+.flaticon-x-mark:before {
+    content: "\f10c";
+}
+
+.flaticon-cancel:before {
+    content: "\f10d";
+}
+
+.flaticon-menu:before {
+    content: "\f10e";
+}
+
+.flaticon-play-button:before {
+    content: "\f10f";
+}
+
+.flaticon-play:before {
+    content: "\f110";
+}
+
+.flaticon-right-arrow:before {
+    content: "\f111";
+}
+
+.flaticon-left-arrow:before {
+    content: "\f112";
+}
+
+.flaticon-left-quote:before {
+    content: "\f113";
+}
+
+.flaticon-right-quote:before {
+    content: "\f114";
+}
+
+.flaticon-delivery:before {
+    content: "\f115";
+}
+
+.flaticon-credit-card:before {
+    content: "\f116";
+}
+
+.flaticon-support:before {
+    content: "\f117";
+}
+
+.flaticon-honey:before {
+    content: "\f118";
+}
+
+.flaticon-honey-1:before {
+    content: "\f119";
+}
+
+.flaticon-honeycomb:before {
+    content: "\f11a";
+}
+
+.flaticon-honey-2:before {
+    content: "\f11b";
+}
+
+.flaticon-bee-2:before {
+    content: "\f11c";
+}
+
+.flaticon-honey-3:before {
+    content: "\f11d";
+}
