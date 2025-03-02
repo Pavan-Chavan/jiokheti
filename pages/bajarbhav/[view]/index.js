@@ -67,10 +67,6 @@ const MarketType = ({ view, meta, marketTypes }) => {
     }
   };
 
-  if (!marketTypes) {
-    return <LoadingSpinner size="medium" />;
-  }
-
   return (
     <Fragment>
       <SeoMeta meta={getMetaForView(view)} />
