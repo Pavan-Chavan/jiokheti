@@ -6,7 +6,7 @@ function CategorySelector({ onSelect }) {
             <div style={{ marginBottom: "80px" }}>
               <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                 <div onClick={() => onSelect("district")}
-                  style={{ padding: "16px", border: "1px solid #e0e0e0", borderRadius: "8px", backgroundColor: "#f0f9f0" }}
+                  style={{ cursor : 'pointer', padding: "16px", border: "1px solid #e0e0e0", borderRadius: "8px", backgroundColor: "#f0f9f0" }}
                 >
                   <h2 style={{ fontWeight: "600" }}>जिल्हानिहाय निवड</h2>
                   <p style={{ fontSize: "14px", marginTop: "8px" }}>जिल्हानिहाय बाजार दरासाठी या टॅबवर क्लिक करा.</p>
