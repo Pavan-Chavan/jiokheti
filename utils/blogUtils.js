@@ -2,7 +2,7 @@ import { krushiMahaDomain } from "./config";
 
 export const getImagePath = (featured_image) => {
 	if (featured_image != "") {
-		return `${krushiMahaDomain}/images/blog-thumbnail/${featured_image}`;
+		return `/images/blog-thumbnail/${featured_image}`;
 	} else {
 		return "" // TODO : need to return a dummy image
 	}
