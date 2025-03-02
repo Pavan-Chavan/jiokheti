@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/footer';
 import SeoMeta from '../../../components/SeoMeta/SeoMeta';
@@ -6,6 +6,7 @@ import { defaultMeta, getBlogListingMeta } from '../../../constants/PageMetaCont
 import { useRouter } from 'next/router';
 import { fetchMarketTableData, getMarketTypesDetails } from '../../../api/bajarbhav';
 import RateDisplay from '../../../components/Bajarbhav/RateDisplay';
+import LoadingSpinner from '../../../components/Spinner';
 
 const geCurrentPageData = (key, slug, marketTypes) => {
 	switch (key) {
@@ -35,6 +36,24 @@ export async function getServerSideProps({ params }) {
 const BlogSingle = ({table, view, slug, meta}) => {
 	const router = useRouter();
 
+	const [isLoading, setIsLoading] = useState(false);
+	
+	useEffect(() => {
+	const handleStart = () => setIsLoading(true);
+	const handleComplete = () => setIsLoading(false);
+	const handleError = () => setIsLoading(false);
+
+	router.events.on('routeChangeStart', handleStart);
+	router.events.on('routeChangeComplete', handleComplete);
+	router.events.on('routeChangeError', handleError);
+
+	return () => {
+		router.events.off('routeChangeStart', handleStart);
+		router.events.off('routeChangeComplete', handleComplete);
+		router.events.off('routeChangeError', handleError);
+	};
+	}, [router]);
+
 	const showSelector = (view) => {
 		router.push(`/bajarbhav/${view}`)
 	}
@@ -43,9 +62,11 @@ const BlogSingle = ({table, view, slug, meta}) => {
 		<Fragment>
 			<SeoMeta meta={meta}/>
 			<Navbar hClass={"header-style-2"} tabId="bajarbhav"/>
-				<div className='container page-container'>
-         			 <RateDisplay table={table}/>
-				</div>
+			{isLoading ? <LoadingSpinner size="medium" /> :
+			<div className='container page-container'>
+				<RateDisplay table={table}/>
+	  		</div>
+			}	
 			<Footer />
 		</Fragment>
 	)
