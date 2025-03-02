@@ -33,7 +33,7 @@ export async function getServerSideProps({ params }) {
 
 const MarketType = ({ view, meta, marketTypes }) => {
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleStart = () => setIsLoading(true);
