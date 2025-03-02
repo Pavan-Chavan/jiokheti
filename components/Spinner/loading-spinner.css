@@ -1,0 +1,107 @@
+.loading-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.jio {
+  color: #f5b942;
+  margin-right: 0.1em;
+}
+
+.kheti {
+  color: #2a7d2e;
+}
+
+.leaves {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.leaf {
+  width: 10px;
+  height: 15px;
+  border-radius: 50% 50% 0 50%;
+  background-color: #4caf50;
+  position: relative;
+  transform-origin: bottom center;
+}
+
+.leaf-left {
+  transform: rotate(-45deg);
+  margin-right: 2px;
+}
+
+.leaf-right {
+  transform: rotate(45deg) scaleX(-1);
+}
+
+.spinner-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #f5b942;
+  border-right-color: #2a7d2e;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive font sizes based on container size */
+.w-16 .logo-text {
+  font-size: 0.8rem;
+}
+
+.w-16 .leaves {
+  top: -8px;
+}
+
+.w-16 .leaf {
+  width: 6px;
+  height: 9px;
+}
+
+.w-24 .logo-text {
+  font-size: 1.2rem;
+}
+
+.w-32 .logo-text {
+  font-size: 1.6rem;
+}
+
+.w-32 .leaves {
+  top: -12px;
+}
+
+.w-32 .leaf {
+  width: 12px;
+  height: 18px;
+}
+

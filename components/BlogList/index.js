@@ -7,6 +7,7 @@ import { useInView } from 'react-intersection-observer';
 import { isEmpty } from 'lodash';
 import { fetchBlogsCallBack } from '../../api/blogs';
 import { blogCardBody, blogCardStle, titleStyle } from '../../styles/style';
+import LoadingSpinner from '../Spinner';
 
 const BlogList = ({category = "", subCategory = "", tag = ""}) => {
 
@@ -64,23 +65,6 @@ const BlogList = ({category = "", subCategory = "", tag = ""}) => {
                                 </div>
                             ))}
 							{hasMore && <div ref={ref} style={{ height: "10px" }}></div>}
-                            {/* <div className="pagination-wrapper pagination-wrapper-left">
-                                <ul className="pg-pagination">
-                                    <li>
-                                        <Link href="/blog-left-sidebar" aria-label="Previous" className="active">
-                                            <i className="fi ti-angle-left"></i>
-                                        </Link>
-                                    </li>
-                                    <li className="active"><Link href="/blog-left-sidebar">1</Link></li>
-                                    <li><Link href="/blog-left-sidebar">2</Link></li>
-                                    <li><Link href="/blog-left-sidebar">3</Link></li>
-                                    <li>
-                                        <Link href="/blog-left-sidebar" aria-label="Next" className="active">
-                                            <i className="fi ti-angle-right"></i>
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div> */}
                         </div>
                     </div>
                     <BlogSidebar/>

@@ -62,7 +62,7 @@ class Header extends Component {
     }
 
     return (
-      <header id="header" className={`site-header ${this.props.hClass}`}>
+      <header id="header" style={{zIndex:1000}} className={`site-header ${this.props.hClass}`}>
         <nav className="navigation navbar navbar-expand-lg p-0">
           <div className="container">
             <div className="row justify-content-center">
